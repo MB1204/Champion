@@ -151,12 +151,12 @@ export default function Layout({ children, currentPageName }) {
       </button>
 
       {/* Quote CTA Button */}
-      <Link
-        to={createPageUrl("Quote")}
+      <a
+        href="/quote.html"
         className="fixed bottom-6 right-6 bg-red-600 text-white px-4 md:px-6 py-3 rounded-full font-montserrat font-bold text-sm uppercase hover:bg-red-700 transition-colors shadow-lg z-50 flex items-center gap-2">
         <span className="hidden md:inline">GET QUOTE</span>
         <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-      </Link>
+      </a>
 
       {/* Footer */}
       <footer className="bg-neutral-900 text-white">

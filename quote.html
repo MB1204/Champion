@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-scale=1.0">
+    <title>Get Your Free Quote - Champion Metal Contracting</title>
+    <style>
+        /* Font Imports */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Open+Sans:wght@400;600;700&display=swap');
+
+        /* Base Styles & Resets */
+        :root {
+            --color-red-100: #FEE2E2;
+            --color-red-500: #EF4444;
+            --color-red-600: #DC2626;
+            --color-red-700: #B91C1C;
+            --color-red-800: #991B1B;
+            --color-gray-50: #F9FAFB;
+            --color-gray-300: #D1D5DB;
+            --color-gray-500: #6B7280;
+            --color-gray-600: #4B5563;
+            --color-gray-700: #374151;
+            --color-gray-900: #111827;
+            --color-green-500: #22C55E;
+            --color-green-600: #16A34A;
+            --color-white: #FFFFFF;
+            --color-black: #000000;
+            --color-neutral-900: #171717;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--color-gray-50);
+            line-height: 1.5;
+        }
+
+        /* Font Families */
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-open-sans { font-family: 'Open Sans', sans-serif; }
+
+        /* Typography */
+        .font-black { font-weight: 900; }
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .uppercase { text-transform: uppercase; }
+        .text-center { text-align: center; }
+
+        /* Colors */
+        .text-white { color: var(--color-white); }
+        .text-gray-900 { color: var(--color-gray-900); }
+        .text-gray-700 { color: var(--color-gray-700); }
+        .text-gray-600 { color: var(--color-gray-600); }
+        .text-red-100 { color: var(--color-red-100); }
+        .text-red-400 { color: #F87171; }
+        .text-red-500 { color: var(--color-red-500); }
+        .bg-gray-50 { background-color: var(--color-gray-50); }
+        .bg-white { background-color: var(--color-white); }
+        .bg-red-600 { background-color: var(--color-red-600); }
+        .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
+        .from-red-800 { --tw-gradient-from: var(--color-red-800); --tw-gradient-to: rgba(153, 27, 27, 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+        .via-neutral-900 { --tw-gradient-to: rgba(23, 23, 23, 0); --tw-gradient-stops: var(--tw-gradient-from), var(--color-neutral-900), var(--tw-gradient-to); }
+        .to-black { --tw-gradient-to: var(--color-black); }
+
+        /* Layout & Spacing */
+        .min-h-screen { min-height: 100vh; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .p-8 { padding: 2rem; }
+        .p-6 { padding: 1.5rem; }
+        .pt-6 { padding-top: 1.5rem; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-2xl { max-width: 42rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .mb-12 { margin-bottom: 3rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mt-12 { margin-top: 3rem; }
+        .ml-2 { margin-left: 0.5rem; }
+        .space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
+        .space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem; }
+        .grid { display: grid; }
+        .gap-6 { gap: 1.5rem; }
+        .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .md\:col-span-2 { grid-column: span 2 / span 2; }
+        .flex { display: flex; }
+        .items-center { align-items: center; }
+        .gap-2 { gap: 0.5rem; }
+
+        /* Components */
+        .rounded-lg { border-radius: 0.5rem; }
+        .shadow-xl { box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+        .overflow-hidden { overflow: hidden; }
+        .block { display: block; }
+        .w-full { width: 100%; }
+
+        /* Form Elements */
+        input, select, textarea {
+            width: 100%;
+            border: 1px solid var(--color-gray-300);
+            border-radius: 0.375rem;
+            padding: 0.5rem 0.75rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            border-color: var(--color-red-500);
+            box-shadow: 0 0 0 2px var(--color-red-500);
+        }
+        textarea {
+            height: 8rem;
+            resize: vertical;
+        }
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.375rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: background-color 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        .button-primary {
+            background-color: var(--color-red-600);
+            color: var(--color-white);
+            padding: 1rem 3rem;
+            font-size: 1.125rem;
+        }
+        .button-primary:hover {
+            background-color: var(--color-red-700);
+        }
+        .button-primary:disabled {
+            background-color: var(--color-gray-500);
+            cursor: not-allowed;
+        }
+        .button-secondary {
+            background-color: var(--color-red-600);
+            color: var(--color-white);
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+        .button-secondary:hover {
+            background-color: var(--color-red-700);
+        }
+
+        /* Icons */
+        .icon {
+            display: inline-block;
+            width: 1.25rem;
+            height: 1.25rem;
+            stroke-width: 2;
+            vertical-align: middle;
+        }
+        .icon-sm {
+            width: 1rem;
+            height: 1rem;
+        }
+        .icon-green {
+            color: var(--color-green-500);
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (min-width: 768px) {
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .md\:col-span-2 { grid-column: span 2 / span 2; }
+            .lg\:text-5xl { font-size: 3rem; line-height: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="min-h-screen bg-gray-50 py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="font-montserrat font-black text-4xl lg:text-5xl text-gray-900 uppercase mb-4">
+                    GET YOUR FREE QUOTE
+                </h1>
+                <p class="font-open-sans text-xl text-gray-600 max-w-2xl mx-auto">
+                    Tell us about your project and we'll provide a detailed, no-obligation quote within 24 hours.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                <div class="bg-red-600 text-white p-6">
+                    <h2 class="font-montserrat font-bold text-2xl mb-2">Project Information</h2>
+                    <p class="font-open-sans text-red-100">
+                        Please provide as much detail as possible to help us prepare an accurate quote.
+                    </p>
+                </div>
+
+                <form action="https://formspree.io/f/xjkakkaz" method="POST" class="p-8 space-y-6">
+                    <!-- Personal Information -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                                First Name
+                            </label>
+                            <input id="firstName" name="firstName" />
+                        </div>
+                        <div>
+                            <label for="lastName" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                                Last Name
+                            </label>
+                            <input id="lastName" name="lastName" />
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="phone" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                                Phone Number
+                            </label>
+                            <input type="tel" id="phone" name="phone" />
+                        </div>
+                        <div>
+                            <label for="email" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                                Email Address *
+                            </label>
+                            <input type="email" id="email" name="email" required />
+                        </div>
+                    </div>
+
+                    <!-- Address Information -->
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="md:col-span-2">
+                            <label for="address" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                                Property Address
+                            </label>
+                            <input id="address" name="address" />
+                        </div>
+                        <div>
+                            <label for="zip" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                                ZIP Code
+                            </label>
+                            <input id="zip" name="zip" />
+                        </div>
+                    </div>
+
+                    <!-- Project Details -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="service" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                                Service Needed
+                            </label>
+                            <select id="service" name="service" defaultValue="">
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="standing-seam">Standing Seam Metal Roof</option>
+                                <option value="seamless-gutters">Seamless Gutters</option>
+                                <option value="copper-systems">Copper Systems</option>
+                                <option value="roof-repair">Roof Repair</option>
+                                <option value="inspection">Inspection</option>
+                                <option value="maintenance">Maintenance</option>
+                                <option value="emergency">Emergency Service</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="urgency" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                                Project Urgency
+                            </label>
+                            <select id="urgency" name="urgency" defaultValue="">
+                                <option value="" disabled selected>How urgent is this?</option>
+                                <option value="emergency">Emergency - ASAP</option>
+                                <option value="urgent">Urgent - Within 1 week</option>
+                                <option value="soon">Soon - Within 1 month</option>
+                                <option value="planning">Planning - 2-3 months</option>
+                                <option value="exploring">Just exploring options</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Project Description -->
+                    <div>
+                        <label for="description" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                            Project Description
+                        </label>
+                        <textarea id="description" name="description" placeholder="Please describe your project in detail. Include any specific concerns, preferences, or questions you have."></textarea>
+                    </div>
+
+                    <!-- Contact Preferences -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="contactPreference" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                                Preferred Contact Method
+                            </label>
+                            <select id="contactPreference" name="contactPreference" defaultValue="">
+                                <option value="" disabled selected>How should we contact you?</option>
+                                <option value="phone">Phone Call</option>
+                                <option value="text">Text Message</option>
+                                <option value="email">Email</option>
+                                <option value="any">Any method is fine</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="contactTime" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                                Best Time to Contact
+                            </label>
+                            <select id="contactTime" name="contactTime" defaultValue="">
+                                <option value="" disabled selected>When is best to reach you?</option>
+                                <option value="morning">Morning (8 AM - 12 PM)</option>
+                                <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                                <option value="evening">Evening (5 PM - 8 PM)</option>
+                                <option value="anytime">Anytime</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Disclaimer -->
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <p class="font-open-sans text-sm text-gray-600 mb-4">
+                            By submitting this form, you consent to receive marketing communications from Champion Metal Contracting.
+                            We respect your privacy and will never share your information with third parties.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center gap-2">
+                                <svg class="icon icon-sm icon-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <span>Free, no-obligation quote</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="icon icon-sm icon-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <span>Licensed and insured professionals</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="icon icon-sm icon-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <span>24-hour response guarantee</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center pt-6">
+                        <button type="submit" class="button button-primary">
+                            GET MY FREE QUOTE
+                            <svg class="icon ml-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Emergency Contact -->
+            <div class="mt-12 text-center">
+                <div class="bg-gradient-to-br from-red-800 via-neutral-900 to-black text-white rounded-lg p-8">
+                    <h3 class="font-montserrat font-bold text-2xl mb-4 text-red-400">
+                        NEED EMERGENCY SERVICE?
+                    </h3>
+                    <p class="font-open-sans text-lg mb-6">
+                        Storm damage or urgent repairs? Don't wait - call us now for immediate assistance.
+                    </p>
+                    <a href="tel:7343479802">
+                        <button class="button button-secondary">
+                            CALL (734) 347-9802
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -144,12 +144,12 @@ No Strings Attached</p>
               </div>
             </div>
 
-            <Link to={createPageUrl("Quote")}>
+            <a href="/quote.html">
               <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded font-montserrat font-bold text-lg uppercase transition-colors flex items-center justify-center mx-auto">
                 GET YOUR FREE QUOTE
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

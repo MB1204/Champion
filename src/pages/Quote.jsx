@@ -21,7 +21,7 @@ export default function Quote() {
             REQUEST RECEIVED!
           </h2>
           <p className="font-open-sans text-gray-600 mb-6">
-            Thank you for your interest in Champion Metal. Our team will review your request 
+            Thank you for your interest in Champion Metal Contracting. Our team will review your request 
             and contact you within 24 hours to schedule your free inspection.
           </p>
           <div className="space-y-3 text-left">
@@ -241,7 +241,7 @@ export default function Quote() {
             {/* Disclaimer */}
             <div className="bg-gray-50 p-6 rounded-lg">
               <p className="font-open-sans text-sm text-gray-600 mb-4">
-                By submitting this form, you consent to receive marketing communications from Champion Metal. 
+                By submitting this form, you consent to receive marketing communications from Champion Metal Contracting. 
                 We respect your privacy and will never share your information with third parties.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">

@@ -101,7 +101,7 @@ export default function QuoteForm({ className = "" }) {
             </div>
 
             <p className="text-xs text-gray-400">
-              By submitting this form, you consent to receive marketing communications from Champion.
+              By submitting this form, you consent to receive marketing communications from Champion Metal Contracting.
             </p>
 
             <Button

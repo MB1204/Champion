@@ -18,7 +18,7 @@ export default function Insurance() {
             Navigating Your Insurance Claim
           </h1>
           <p className="font-open-sans text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-            Let Champion Roofing guide you through every step of the storm damage insurance claims process, ensuring a smooth and hassle-free experience.
+            Let Champion Metal Contracting guide you through every step of the storm damage insurance claims process, ensuring a smooth and hassle-free experience.
           </p>
           <Link to={createPageUrl("Quote")}>
             <Button className="bg-white text-red-600 hover:bg-gray-100 font-montserrat font-bold py-4 px-8 rounded-full text-lg uppercase transition-all duration-300 transform hover:scale-105 shadow-md">
@@ -44,7 +44,7 @@ export default function Insurance() {
                   </h2>
                 </div>
                 <p className="font-open-sans text-gray-300 leading-relaxed">
-                  Sometimes roof damage is as obvious as a fallen tree on your home or a section of missing shingles, telling you right away repairs are necessary. This is not always the case, however, which is why it's important to call a trained roof inspector like Champion Roofing as soon as possible. This inspection will tell you how much damage you have and whether repairs or replacement are necessary.
+                  Sometimes roof damage is as obvious as a fallen tree on your home or a section of missing shingles, telling you right away repairs are necessary. This is not always the case, however, which is why it's important to call a trained roof inspector like Champion Metal Contracting as soon as possible. This inspection will tell you how much damage you have and whether repairs or replacement are necessary.
                 </p>
               </div>
             </div>
@@ -101,7 +101,7 @@ export default function Insurance() {
             </div>
             <p className="font-open-sans text-gray-300 leading-relaxed">
               Once the work is completed, we send a final invoice to the insurance company. The insurer will then release the remainder of the money and give you a second check that covers the remaining cost of the work done to your home. After a storm, in many cases, you'll get a visit from "door-to-door" roofers or "storm chasers," offering to inspect your roof. When you choose Champion Roofing instead, you choose peace of mind knowing you're working with a licensed, insured, and experienced roofing company that can help you through the entire claims and repair process.
-            </p>
+            </p> 
           </div>
         </div>
       </section>

@@ -70,7 +70,7 @@ export default function Layout({ children, currentPageName }) {
           <Link to={createPageUrl("Homepage")} className="flex-shrink-0">
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68aa4517a991adb8ec86d5aa/fd0dbc91f_Champion_I-01-removebg-preview.png"
-              alt="Champion Roofing Logo"
+              alt="Champion Metal Contracting Logo"
               className="h-16 md:h-20 w-auto" />
           </Link>
 
@@ -222,16 +222,15 @@ export default function Layout({ children, currentPageName }) {
              <div className="flex justify-center mb-6">
                 <Link to={createPageUrl("Homepage")}>
                   <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68aa4517a991adb8ec86d5aa/fd0dbc91f_Champion_I-01-removebg-preview.png"
-                    alt="Champion Roofing Logo"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68aa4517a991adb8ec86d5aa/fd0dbc91f_Champion_I-01-removebg-preview.png" 
+                    alt="Champion Metal Contracting Logo"
                     className="h-16 w-auto"
                   />
                 </Link>
             </div>
-            <p className="">© 2025 Champion. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p className="">© 2025 Champion Metal Contracting. All rights reserved. | Privacy Policy | Terms of Service</p>
           </div>
         </div>
       </footer>
     </div>);
 }
-

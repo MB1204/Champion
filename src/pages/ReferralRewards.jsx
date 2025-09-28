@@ -36,7 +36,7 @@ export default function ReferralRewards() {
             Referral Rewards Program
           </h1>
           <p className="font-open-sans text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-            Exciting referral rewards program coming soon! Stay tuned for details on how you can earn rewards for referring friends and neighbors to Champion Roofing.
+            Exciting referral rewards program coming soon! Stay tuned for details on how you can earn rewards for referring friends and neighbors to Champion Metal Contracting.
           </p>
           <Button
             className="bg-red-600 hover:bg-red-700 text-white font-montserrat font-bold py-4 px-8 rounded-full text-lg uppercase transition-all duration-300 transform hover:scale-105 shadow-md"
@@ -56,7 +56,7 @@ export default function ReferralRewards() {
               We're Building Something Special
             </h2>
             <p className="font-open-sans text-lg text-gray-700 leading-relaxed">
-              Our referral rewards program is currently under development. We're working to create an amazing program that will reward our loyal customers for spreading the word about Champion Roofing's exceptional service.
+              Our referral rewards program is currently under development. We're working to create an amazing program that will reward our loyal customers for spreading the word about Champion's exceptional service.
             </p>
           </div>
 

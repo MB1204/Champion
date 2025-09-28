@@ -1,32 +1,30 @@
 
-import React, { useState } from "react";
+import React from "react";
+import { useForm, ValidationError } from '@formspree/react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 export default function QuoteForm({ className = "" }) {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    phone: "",
-    email: "",
-    zip: "",
-    service: ""
-  });
+  const [state, handleSubmit] = useForm("xjkakkaz");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Quote request:", formData);
-  };
+  if (state.succeeded) {
+    return (
+      <div className={`bg-neutral-900 p-8 rounded-lg text-center ${className}`}>
+        <div className="flex flex-col items-center gap-4">
+          <CheckCircle className="w-12 h-12 text-green-500" />
+          <h3 className="font-montserrat font-black text-2xl text-white">
+            Thanks for your submission!
+          </h3>
+          <p className="text-gray-300">
+            Our team will get back to you shortly.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
-  const handleInputChange = (field, value) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: value
-    }));
-  };
 
   return (
     <div className={`bg-neutral-900 p-8 rounded-lg ${className}`}>
@@ -50,53 +48,56 @@ export default function QuoteForm({ className = "" }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Input
                 placeholder="First Name"
-                value={formData.firstName}
-                onChange={(e) => handleInputChange("firstName", e.target.value)}
+                id="firstName"
+                name="firstName"
                 className="bg-black border-gray-600 text-white placeholder-gray-400 focus:border-red-500"
               />
               <Input
                 placeholder="Last Name"
-                value={formData.lastName}
-                onChange={(e) => handleInputChange("lastName", e.target.value)}
+                id="lastName"
+                name="lastName"
                 className="bg-black border-gray-600 text-white placeholder-gray-400 focus:border-red-500"
               />
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Input
+                id="phone"
+                name="phone"
                 placeholder="Phone"
-                value={formData.phone}
-                onChange={(e) => handleInputChange("phone", e.target.value)}
                 className="bg-black border-gray-600 text-white placeholder-gray-400 focus:border-red-500"
               />
               <Input
                 placeholder="Email"
                 type="email"
-                value={formData.email}
-                onChange={(e) => handleInputChange("email", e.target.value)}
+                id="email"
+                name="email"
                 className="bg-black border-gray-600 text-white placeholder-gray-400 focus:border-red-500"
               />
+              <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-xs sm:col-span-2" />
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Input
                 placeholder="ZIP Code"
-                value={formData.zip}
-                onChange={(e) => handleInputChange("zip", e.target.value)}
+                id="zip"
+                name="zip"
                 className="bg-black border-gray-600 text-white placeholder-gray-400 focus:border-red-500"
               />
-              <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)}>
-                <SelectTrigger className="bg-black border-gray-600 text-white focus:border-red-500">
-                  <SelectValue placeholder="Service Needed" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="roofing">Roofing</SelectItem>
-                  <SelectItem value="gutters">Gutters</SelectItem>
-                  <SelectItem value="copper">Copper Systems</SelectItem>
-                  <SelectItem value="inspection">Inspection</SelectItem>
-                  <SelectItem value="repair">Repair</SelectItem>
-                </SelectContent>
-              </Select>
+              {/* Using a native select for easier integration with Formspree */}
+              <select
+                id="service"
+                name="service"
+                defaultValue=""
+                className="bg-black border-gray-600 text-white placeholder-gray-400 focus:border-red-500 rounded-md px-3 py-2 text-sm w-full"
+              >
+                <option value="" disabled>Service Needed</option>
+                <option value="roofing">Roofing</option>
+                <option value="gutters">Gutters</option>
+                <option value="copper">Copper Systems</option>
+                <option value="inspection">Inspection</option>
+                <option value="repair">Repair</option>
+              </select>
             </div>
 
             <p className="text-xs text-gray-400">
@@ -105,7 +106,8 @@ export default function QuoteForm({ className = "" }) {
 
             <Button
               type="submit"
-              className="w-full bg-red-600 hover:bg-red-700 text-white font-montserrat font-bold py-4 text-lg uppercase transition-colors"
+              disabled={state.submitting}
+              className="w-full bg-red-600 hover:bg-red-700 text-white font-montserrat font-bold py-4 text-lg uppercase transition-colors disabled:bg-gray-500"
             >
               GET A FREE QUOTE
               <ArrowRight className="w-5 h-5 ml-2" />

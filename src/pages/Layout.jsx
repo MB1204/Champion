@@ -188,7 +188,7 @@ export default function Layout({ children, currentPageName }) {
             <div>
               <h3 className="font-montserrat font-bold text-lg mb-6 text-[#DB4444]">Contact</h3>
               <div className="space-y-4 text-gray-300">
-                <a href="tel:9415557663" className="flex items-center gap-3 hover:text-white transition-colors">
+                <a href="tel:7343479802" className="flex items-center gap-3 hover:text-white transition-colors">
                   <Phone className="w-5 h-5 text-[#DB4444] flex-shrink-0" />
                   <span className="">(734)-347-9802</span>
                 </a>
@@ -209,7 +209,7 @@ export default function Layout({ children, currentPageName }) {
               <p className="font-open-sans text-gray-300 mb-4">
                 Storm damage? We're here to help 24/7.
               </p>
-              <a href="tel:9415557663">
+              <a href="tel:7343479802">
                 <button className="bg-[#DB4444] hover:bg-[#C03939] text-white font-montserrat font-bold w-full py-3 rounded-md flex items-center justify-center transition-colors">
                   <Phone className="w-4 h-4 mr-2" />
                   CALL NOW

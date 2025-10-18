@@ -1,0 +1,156 @@
+<div class="bg-white rounded-lg shadow-xl overflow-hidden">
+    <div class="bg-red-600 text-white p-6">
+        <h2 class="font-montserrat font-bold text-2xl mb-2">Project Information</h2>
+        <p class="font-open-sans text-red-100">
+            Please provide as much detail as possible to help us prepare an accurate quote.
+        </p>
+    </div>
+
+    <form action="https://formspree.io/f/xjkakkaz" method="POST" class="p-8 space-y-6">
+        <!-- Personal Information -->
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <label for="firstName" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                    First Name
+                </label>
+                <input id="firstName" name="firstName" class="w-full border-gray-300 focus:border-red-500 rounded-md p-2 border" />
+            </div>
+            <div>
+                <label for="lastName" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                    Last Name
+                </label>
+                <input id="lastName" name="lastName" class="w-full border-gray-300 focus:border-red-500 rounded-md p-2 border" />
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <label for="phone" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                    Phone Number
+                </label>
+                <input type="tel" id="phone" name="phone" class="w-full border-gray-300 focus:border-red-500 rounded-md p-2 border" />
+            </div>
+            <div>
+                <label for="email" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                    Email Address *
+                </label>
+                <input type="email" id="email" name="email" required class="w-full border-gray-300 focus:border-red-500 rounded-md p-2 border" />
+            </div>
+        </div>
+
+        <!-- Address Information -->
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="md:col-span-2">
+                <label for="address" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                    Property Address
+                </label>
+                <input id="address" name="address" class="w-full border-gray-300 focus:border-red-500 rounded-md p-2 border" />
+            </div>
+            <div>
+                <label for="zip" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                    ZIP Code
+                </label>
+                <input id="zip" name="zip" class="w-full border-gray-300 focus:border-red-500 rounded-md p-2 border" />
+            </div>
+        </div>
+
+        <!-- Project Details -->
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <label for="service" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                    Service Needed
+                </label>
+                <select id="service" name="service" defaultValue="" class="w-full border-gray-300 focus:border-red-500 rounded-md p-2 border">
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="standing-seam">Standing Seam Metal Roof</option>
+                    <option value="seamless-gutters">Seamless Gutters</option>
+                    <option value="copper-systems">Copper Systems</option>
+                    <option value="roof-repair">Roof Repair</option>
+                    <option value="inspection">Inspection</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="emergency">Emergency Service</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="urgency" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                    Project Urgency
+                </label>
+                <select id="urgency" name="urgency" defaultValue="" class="w-full border-gray-300 focus:border-red-500 rounded-md p-2 border">
+                    <option value="" disabled selected>How urgent is this?</option>
+                    <option value="emergency">Emergency - ASAP</option>
+                    <option value="urgent">Urgent - Within 1 week</option>
+                    <option value="soon">Soon - Within 1 month</option>
+                    <option value="planning">Planning - 2-3 months</option>
+                    <option value="exploring">Just exploring options</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Project Description -->
+        <div>
+            <label for="description" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                Project Description
+            </label>
+            <textarea id="description" name="description" placeholder="Please describe your project in detail. Include any specific concerns, preferences, or questions you have." class="w-full border-gray-300 focus:border-red-500 rounded-md p-2 border h-32"></textarea>
+        </div>
+
+        <!-- Contact Preferences -->
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <label for="contactPreference" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                    Preferred Contact Method
+                </label>
+                <select id="contactPreference" name="contactPreference" defaultValue="" class="w-full border-gray-300 focus:border-red-500 rounded-md p-2 border">
+                    <option value="" disabled selected>How should we contact you?</option>
+                    <option value="phone">Phone Call</option>
+                    <option value="text">Text Message</option>
+                    <option value="email">Email</option>
+                    <option value="any">Any method is fine</option>
+                </select>
+            </div>
+            <div>
+                <label for="contactTime" class="font-open-sans font-semibold text-gray-700 mb-2 block">
+                    Best Time to Contact
+                </label>
+                <select id="contactTime" name="contactTime" defaultValue="" class="w-full border-gray-300 focus:border-red-500 rounded-md p-2 border">
+                    <option value="" disabled selected>When is best to reach you?</option>
+                    <option value="morning">Morning (8 AM - 12 PM)</option>
+                    <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                    <option value="evening">Evening (5 PM - 8 PM)</option>
+                    <option value="anytime">Anytime</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="bg-gray-50 p-6 rounded-lg">
+            <p class="font-open-sans text-sm text-gray-600 mb-4">
+                By submitting this form, you consent to receive marketing communications from Champion Metal Contracting.
+                We respect your privacy and will never share your information with third parties.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>Free, no-obligation quote</span>
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>Licensed and insured professionals</span>
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>24-hour response guarantee</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center pt-6">
+            <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-12 py-4 rounded font-montserrat font-bold text-lg uppercase disabled:bg-gray-500">
+                GET MY FREE QUOTE
+                <svg class="w-5 h-5 ml-2 inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+        </div>
+    </form>
+</div>

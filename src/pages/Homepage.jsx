@@ -65,9 +65,11 @@ export default function Homepage() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center items-center w-full">
-                  <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-montserrat font-bold text-sm sm:text-base md:text-lg uppercase transition-colors w-full sm:w-auto max-w-xs sm:max-w-none">
-                    CALL NOW: (734) 347-9802
-                  </button>
+                  <a href="tel:7343479802">
+                    <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-montserrat font-bold text-sm sm:text-base md:text-lg uppercase transition-colors w-full sm:w-auto max-w-xs sm:max-w-none">
+                      CALL NOW: (734) 347-9802
+                    </button>
+                  </a>
                   <Link to={createPageUrl("Quote")}>
                     <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-montserrat font-bold text-sm sm:text-base md:text-lg uppercase transition-colors w-full sm:w-auto max-w-xs sm:max-w-none">
                       SCHEDULE FREE INSPECTION
@@ -187,9 +189,11 @@ No Strings Attached</p>
             is available 24/7 to protect your home and family.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded font-montserrat font-bold text-lg uppercase transition-colors">
-              CALL FOR EMERGENCY: (734) 347-9802
-            </button>
+            <a href="tel:7343479802">
+              <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded font-montserrat font-bold text-lg uppercase transition-colors">
+                CALL FOR EMERGENCY: (734) 347-9802
+              </button>
+            </a>
           </div>
         </div>
       </section>
